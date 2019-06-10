@@ -4,8 +4,7 @@ import styled from 'styled-components'
 const Container = styled.div`
   margin: 0;
   height: 33rem;
-  background: #e5e5e5;
-  box-shadow: inset 0px 0px 26px -70px rgba(0,0,0,0.16);
+  background: linear-gradient(#dc0e17, #bf3333);
 
   .logo {
     margin-top: 4rem;
@@ -13,15 +12,18 @@ const Container = styled.div`
     justify-content: center;
 
     svg {
-      margin: 6rem 0 0;
+      margin: 5rem 0 0;
       height: 10rem;
-      fill: #dc0e17;
+      fill: white;
+      filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+      z-index: 0;
     }
   }
 
   h1 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    color: white;
   }
 
   .icon-container {
