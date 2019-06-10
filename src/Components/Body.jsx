@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   margin: 0;
-  height: 30rem;
+  height: 33rem;
   background: #e5e5e5;
   box-shadow: inset 0px 0px 26px -70px rgba(0,0,0,0.16);
 
@@ -23,6 +23,15 @@ const Container = styled.div`
     font-family: 'Poppins', sans-serif;
     text-align: center;
   }
+
+  .icon-container {
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 8rem;
+    }
+  }
 `
 
 const Body = () => 
@@ -33,6 +42,12 @@ const Body = () =>
     </svg>
   </div>
   <h1>THE FIRST CHOICE GAMING PLATFORM</h1>
+  <div className="icon-container">
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
+  </div>
 </Container>
 
 export default Body

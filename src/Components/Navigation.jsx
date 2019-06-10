@@ -33,7 +33,7 @@ const Container = styled.div`
         :hover {
           color: #000;
           font-weight: 500;
-          border-bottom: 1px solid black;
+          border-bottom: 1px solid #dc0e17;
         }
       }
     }
