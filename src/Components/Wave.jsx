@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
-height: 20rem;
 z-index: -1;
 
 .wave.one {
@@ -10,7 +9,7 @@ z-index: -1;
   width: 100%;
   transform: rotate(180deg);
   animation: wave 10s infinite linear;
-  filter: drop-shadow(0px -5px 5px rgba(0, 0, 0, 0.2));
+  filter: drop-shadow(0px -2px 5px rgba(0, 0, 0, 0.2));
 }
 `
 const Wave = () =>
