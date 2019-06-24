@@ -30,8 +30,19 @@ const Container = styled.div`
     display: flex;
     justify-content: center;
 
+    @keyframes grow {
+      100% {
+        transform: scale(1.2);
+      }
+    }
+
     img {
-      height: 8rem;
+      height: 7rem;
+      margin: 1rem 1.5rem;
+      animation: shrink 1s forwards ease-in-out;
+    }
+    img:hover {
+      animation: grow 1s forwards ease-out;
     }
   }
 `
@@ -46,9 +57,9 @@ const Body = () =>
   <h1>THE FIRST CHOICE GAMING PLATFORM</h1>
   <div className="icon-container">
     <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
-    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
-    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
-    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/lottery_icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/sports-icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/bingo_icon_bold.png"></img>
   </div>
 </Container>
 

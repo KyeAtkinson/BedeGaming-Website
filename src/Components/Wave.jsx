@@ -5,7 +5,7 @@ const Container = styled.div`
 z-index: -1;
 
 .wave.one {
-  height: 2rem;
+  height: 2.5rem;
   width: 100%;
   transform: rotate(180deg);
   animation: wave 10s infinite linear;

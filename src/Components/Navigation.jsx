@@ -5,10 +5,11 @@ const Container = styled.div`
 
 .navigation-container {
   background: #fff;
+  box-shadow: 0px 4px 40px -22px rgba(0,0,0,0.27);
   display: grid;
   grid-template-columns: 1fr 100px 1fr;
   height: 5rem;
-  box-shadow: 0px 4px 40px -22px rgba(0,0,0,0.27);
+  justify-content: center;
   overflow: hidden;
   position: fixed;
   top: 0;
