@@ -4,8 +4,7 @@ import styled from 'styled-components'
 const Container = styled.div`
   margin: 0;
   height: 33rem;
-  background: #e5e5e5;
-  box-shadow: inset 0px 0px 26px -70px rgba(0,0,0,0.16);
+  background: linear-gradient(#dc0e17, #bf3333);
 
   .logo {
     margin-top: 4rem;
@@ -13,23 +12,37 @@ const Container = styled.div`
     justify-content: center;
 
     svg {
-      margin: 6rem 0 0;
+      margin: 5rem 0 0;
       height: 10rem;
-      fill: #dc0e17;
+      fill: white;
+      filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
+      z-index: 0;
     }
   }
 
   h1 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    color: white;
   }
 
   .icon-container {
     display: flex;
     justify-content: center;
 
+    @keyframes grow {
+      100% {
+        transform: scale(1.2);
+      }
+    }
+
     img {
-      height: 8rem;
+      height: 7rem;
+      margin: 1rem 1.5rem;
+      animation: shrink 1s forwards ease-in-out;
+    }
+    img:hover {
+      animation: grow 1s forwards ease-out;
     }
   }
 `
@@ -44,9 +57,9 @@ const Body = () =>
   <h1>THE FIRST CHOICE GAMING PLATFORM</h1>
   <div className="icon-container">
     <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
-    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
-    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
-    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/lottery_icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/sports-icon_bold.png"></img>
+    <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/bingo_icon_bold.png"></img>
   </div>
 </Container>
 

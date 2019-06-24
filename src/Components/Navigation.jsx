@@ -5,14 +5,16 @@ const Container = styled.div`
 
 .navigation-container {
   background: #fff;
+  box-shadow: 0px 4px 40px -22px rgba(0,0,0,0.27);
   display: grid;
   grid-template-columns: 1fr 100px 1fr;
   height: 5rem;
-  box-shadow: 0px 4px 40px -22px rgba(0,0,0,0.27);
+  justify-content: center;
   overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 
   .links {
     display: flex;
@@ -57,19 +59,6 @@ const Container = styled.div`
   }
 }
 
-.underblock {
-  height: 1rem;
-  width: 40vw;
-  background: #dc0e17;
-  border-radius: 0 0 5rem 5rem;
-  box-shadow: 0px 4px 40px -22px rgba(0,0,0,0.27);
-  overflow: hidden;
-  position: fixed;
-  top: 5rem;
-  left: 50%;
-  transform: translate(-50%, 0);
-}
-
 `
 
 const Navigation = () =>
@@ -96,8 +85,6 @@ const Navigation = () =>
         <li>Contact</li>
       </ul>
     </div>
-  </div>
-  <div className="underblock">
   </div>
 </Container>
 
