@@ -47,7 +47,7 @@ const Container = styled.div`
   }
 `
 
-const Body = () => 
+const Body = () =>
 <Container>
   <div className="logo">
     <svg viewBox="0 0 148 51" xmlns="http://www.w3.org/2000/svg">
