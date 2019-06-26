@@ -1,7 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Fade from 'react-reveal/Fade';
-import ImageMapper from './ImageMapper'
 import VideoPlayer from './VideoPlayer'
 
 import image from '../images/casino-icon_bold.png';

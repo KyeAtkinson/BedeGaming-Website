@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Videoplayer from './Videoplayer'
 
 const Container = styled.div`
   margin: 0;
