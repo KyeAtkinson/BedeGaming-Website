@@ -10,11 +10,10 @@ const Container = styled.div`
   grid-template-columns: 1fr 100px 1fr;
   height: 5rem;
   justify-content: center;
-  overflow: hidden;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;
+  z-index: 100;
 
   .links {
     display: flex;
@@ -34,18 +33,47 @@ const Container = styled.div`
 
         :hover {
           color: #000;
-          font-weight: 500;
           border-bottom: 1px solid #dc0e17;
+          font-weight: 500;
         }
       }
     }
   }
 
-  .links.right {
-    width: 100%;
-  }
-  .links.left {
-    width: 100%;
+  .links {
+    &.left,
+    &.right {
+      width: 100%;
+    }
+
+    .nav-item {
+      .menu {
+        background: #fff;
+        border-radius: 0 0 6px 6px;
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        min-width: 13rem;
+
+        a {
+          color: #cecece;
+          text-decoration: none;
+          margin: 1rem;
+        }
+        a:hover {
+          color: #fff;
+          border-bottom: 1px #dc0e17 solid;
+        }
+      }
+
+      &:hover {
+        .menu {
+          display: flex;
+          background: #333;
+          border-top: solid #dc0e17 3px;
+        }
+      }
+    }
   }
 
   .logo {
@@ -64,12 +92,18 @@ const Container = styled.div`
 const Navigation = () =>
 <Container>
   <div className="navigation-container">
-    <div className="links left"> 
+    <div className="links left">
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Products</li>
-        <li>Sectors</li>
+        <li className='nav-item'>Home</li>
+        <li className='nav-item'> About
+          <div className="menu">
+            <a href="#">Why Bede ?</a>
+            <a href="#">Leadership</a>
+            <a href="#">Candidates</a>
+          </div>
+        </li>
+        <li className='nav-item'>Products</li>
+        <li className='nav-item'>Sectors</li>
       </ul>
     </div>
     <div className="logo">
@@ -79,10 +113,10 @@ const Navigation = () =>
     </div>
     <div className="links right">
       <ul>
-        <li>Partners</li>
-        <li>Careers</li>
-        <li>News</li>
-        <li>Contact</li>
+        <li className='nav-item'>Partners</li>
+        <li className='nav-item'>Careers</li>
+        <li className='nav-item'>News</li>
+        <li className='nav-item'>Contact</li>
       </ul>
     </div>
   </div>
