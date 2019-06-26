@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import Videoplayer from './Videoplayer'
 
 const Container = styled.div`
   margin: 0;
@@ -47,7 +48,7 @@ const Container = styled.div`
   }
 `
 
-const Body = () => 
+const Body = () =>
 <Container>
   <div className="logo">
     <svg viewBox="0 0 148 51" xmlns="http://www.w3.org/2000/svg">

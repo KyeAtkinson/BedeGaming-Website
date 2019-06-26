@@ -1,7 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import Fade from 'react-reveal/Fade';
-import Imagemapper from './Imagemapper'
+import ImageMapper from './ImageMapper'
+import VideoPlayer from './VideoPlayer'
+
+import image from '../images/casino-icon_bold.png';
 
 const Container = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -13,11 +16,11 @@ const Container = styled.div`
   }
 
   h1:after {
-    border-bottom: 1px solid black; 
+    border-bottom: 1px solid black;
     content:"";
     display: block;
     margin: 0 auto;
-    width: 15%; 
+    width: 15%;
     padding-top: 20px;
   }
 
@@ -42,7 +45,7 @@ const Container = styled.div`
       font-size: 1rem;
       color: #dc0e17;
     }
-    
+
     button {
       background: #dc0e17;
       border: none;
@@ -63,10 +66,26 @@ const Container = styled.div`
       height: 10rem;
     }
   }
+
+  video {
+    border-radius: 0.5rem;
+    height: 20rem;
+    margin-top: 3rem;
+    opacity: 0.3;
+    transition: all 1000ms ease-out;
+  }
+
+  video:hover {
+    animation: scale 2s infinite;
+    border-radius: 1rem;
+    opacity: 1;
+    transform: scale(1.5);
+    }
+  }
 `
-const Product =()=> 
+const Product =()=>
   <Container>
-    <Fade><h1 className="title">Products</h1></Fade>
+    <h1 className="title">Products</h1>
     <div className="product-container">
       <div className="content one">
         <h2>Content</h2>
@@ -89,20 +108,17 @@ const Product =()=>
     </div>
     <div className="why-section">
       <h1>Why Bede?</h1>
-      <Fade>
-        <div className="image-container">
-          <img src="https://bedegaming.com/wp-content/uploads/2017/09/3m-Registered-Players.png" alt=""></img>
-          <img src="https://bedegaming.com/wp-content/uploads/2017/09/Monthly-Users.png" alt=""></img>
-          <img src="https://bedegaming.com/wp-content/uploads/2017/09/Revenue-From-Mobile.png" alt=""></img>
-          <img src="https://bedegaming.com/wp-content/uploads/2017/09/Revenue-From-Mobile.png" alt=""></img>
-          <img src="https://bedegaming.com/wp-content/uploads/2017/09/Staked-Per-Annum.png" alt=""></img>
-          <img src="https://bedegaming.com/wp-content/uploads/2015/03/Transactions-Per-Annum.png" alt=""></img>
-          <img src="https://bedegaming.com/wp-content/uploads/2017/09/79-YoY-Revenue-Growth.png" alt=""></img>
-        </div>
-      </Fade>
+      <div className="image-container">
+        <img src={image} alt="cubnt" />
+        {/* <img src="https://bedegaming.com/wp-content/uploads/2017/09/Monthly-Users.png" alt="" />
+        <img src="https://bedegaming.com/wp-content/uploads/2017/09/Revenue-From-Mobile.png" alt="" />
+        <img src="https://bedegaming.com/wp-content/uploads/2017/09/Staked-Per-Annum.png" alt="" />
+        <img src="https://bedegaming.com/wp-content/uploads/2015/03/Transactions-Per-Annum.png" alt="" />
+        <img src="https://bedegaming.com/wp-content/uploads/2017/09/79-YoY-Revenue-Growth.png" alt="" /> */}
+      </div>
     </div>
     <div className="partners">
-      <Imagemapper />
+      <VideoPlayer src="https://dms.licdn.com/playback/C5605AQHRfZRtO86Nwg/d0bac112287240e082e59364d2ecebe2/feedshare-mp4_3300-captions-thumbnails/1507940147251-drlcss?e=1561633200&v=beta&t=Ro0g4ZE6wAbgRQfR_e4GW15YrAV8RdnJsb8LF_HVnuU"/>
     </div>
   </Container>
 
