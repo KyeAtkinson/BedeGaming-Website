@@ -12,7 +12,7 @@ const Container = styled.div`
   top: 0;
   transition: all 300ms ease-in-out;
   width: 100%;
-  z-index: 100;
+  z-index: 2;
 
   .links {
     display: flex;
@@ -106,33 +106,33 @@ class Navigation extends React.Component {
   }
 
   handleScroll() {
-    if (window.scrollY > 300) {
+    if (window.scrollY > 50) {
       this.setState({
-        isAtTop: false
+        isAtTop: false,
       });
-    }
-    else {
+    } else {
       this.setState({
-        isAtTop: true
+        isAtTop: true,
       });
     }
   }
 
   render() {
-    return(
+    return (
       <Container isAtTop={this.state.isAtTop}>
         <div className="links left">
           <ul>
-            <li className='nav-item'>Home</li>
-            <li className='nav-item'> About
+            <li className="nav-item">Home</li>
+            <li className="nav-item">
+              About
               <div className="menu">
-                <a href="#">Why Bede ?</a>
-                <a href="#">Leadership</a>
-                <a href="#">Candidates</a>
+                <a href="#why-bede">Why Bede ?</a>
+                <a href="#leadership">Leadership</a>
+                <a href="#candidates">Candidates</a>
               </div>
             </li>
-            <li className='nav-item'>Products</li>
-            <li className='nav-item'>Sectors</li>
+            <li className="nav-item">Products</li>
+            <li className="nav-item">Sectors</li>
           </ul>
         </div>
         <div className="logo">
@@ -142,10 +142,10 @@ class Navigation extends React.Component {
         </div>
         <div className="links right">
           <ul>
-            <li className='nav-item'>Partners</li>
-            <li className='nav-item'>Careers</li>
-            <li className='nav-item'>News</li>
-            <li className='nav-item'>Contact</li>
+            <li className="nav-item">Partners</li>
+            <li className="nav-item">Careers</li>
+            <li className="nav-item">News</li>
+            <li className="nav-item">Contact</li>
           </ul>
         </div>
       </Container>
@@ -153,4 +153,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation
+export default Navigation;

@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const Container = styled.div`
   margin: 0;
-  height: 40rem;
-  background: linear-gradient(#dc0e17, #bf3333);
+  height: 35rem;
+  background: linear-gradient(#cb2d3e, #ef473a);
   padding-top: 3rem;
 
   .logo {
@@ -55,12 +55,6 @@ const Body = () => (
       </svg>
     </div>
     <h1>THE FIRST CHOICE GAMING PLATFORM</h1>
-    <div className="icon-container">
-      <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/casino-icon_bold.png" />
-      <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/lottery_icon_bold.png" />
-      <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/sports-icon_bold.png" />
-      <img alt="casino" src="https://bedegaming.com/wp-content/uploads/2017/09/bingo_icon_bold.png" />
-    </div>
   </Container>
 );
 

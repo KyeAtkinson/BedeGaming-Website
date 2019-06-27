@@ -18,5 +18,9 @@
     "render": true,
     "mount": true,
     "shallow": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
   }
 }
