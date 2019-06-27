@@ -2,8 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import VideoPlayer from './VideoPlayer';
 
-import image from '../images/casino-icon_bold.png';
-
 const Container = styled.div`
   font-family: 'Poppins', sans-serif;
   text-align: center;
