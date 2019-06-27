@@ -4,7 +4,7 @@ class Videoplayer extends React.Component {
   constructor(props) {
     super(props);
     this.videoRef = React.createRef();
-    this.state = {isPaused: true, isMuted: true};
+    this.state = { isPaused: true, isMuted: true };
     this.handleClick = this.handleClick.bind(this);
     this.handleHover = this.handleHover.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
@@ -14,7 +14,7 @@ class Videoplayer extends React.Component {
     window.addEventListener('scroll', this.handleScroll);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
   }
 
@@ -42,8 +42,7 @@ class Videoplayer extends React.Component {
     }), () => {
       if (this.state.isPaused) {
         this.playVideo();
-      }
-      else {
+      } else {
         this.pauseVideo();
       }
     });
@@ -72,4 +71,4 @@ class Videoplayer extends React.Component {
   }
 }
 
-export default Videoplayer
+export default Videoplayer;

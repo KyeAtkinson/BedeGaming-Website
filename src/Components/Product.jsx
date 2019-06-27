@@ -1,8 +1,6 @@
-import React from 'react'
-import styled from 'styled-components'
-import VideoPlayer from './VideoPlayer'
-
-import image from '../images/casino-icon_bold.png';
+import React from 'react';
+import styled from 'styled-components';
+import VideoPlayer from './VideoPlayer';
 
 const Container = styled.div`
   font-family: 'Poppins', sans-serif;
@@ -80,8 +78,9 @@ const Container = styled.div`
     transform: scale(1.5);
     }
   }
-`
-const Product =()=>
+`;
+
+const Product = () =>
   <Container>
     <h1 className="title">Products</h1>
     <div className="product-container">
@@ -106,18 +105,8 @@ const Product =()=>
     </div>
     <div className="why-section">
       <h1>Why Bede?</h1>
-      <div className="image-container">
-        <img src={image} alt="cubnt" />
-        {/* <img src="https://bedegaming.com/wp-content/uploads/2017/09/Monthly-Users.png" alt="" />
-        <img src="https://bedegaming.com/wp-content/uploads/2017/09/Revenue-From-Mobile.png" alt="" />
-        <img src="https://bedegaming.com/wp-content/uploads/2017/09/Staked-Per-Annum.png" alt="" />
-        <img src="https://bedegaming.com/wp-content/uploads/2015/03/Transactions-Per-Annum.png" alt="" />
-        <img src="https://bedegaming.com/wp-content/uploads/2017/09/79-YoY-Revenue-Growth.png" alt="" /> */}
-      </div>
     </div>
-    <div className="partners">
-      <VideoPlayer src="https://dms.licdn.com/playback/C5605AQHRfZRtO86Nwg/d0bac112287240e082e59364d2ecebe2/feedshare-mp4_3300-captions-thumbnails/1507940147251-drlcss?e=1561633200&v=beta&t=Ro0g4ZE6wAbgRQfR_e4GW15YrAV8RdnJsb8LF_HVnuU"/>
-    </div>
+      <VideoPlayer src="https://dms.licdn.com/playback/C5605AQE44UyrX4TXuA/c8f6070ebf854786b3e2e180b90a8745/feedshare-mp4_3300-captions-thumbnails/1507940147251-drlcss?e=1561726800&v=beta&t=Z7OSg0mY8fvjRME1aIt0cylBqLSqsqhIXx1P0u1cLD0"/>
   </Container>
 
 export default Product
