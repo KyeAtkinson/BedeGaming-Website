@@ -109,7 +109,6 @@ class Navigation extends React.Component {
   }
 
   handleScroll() {
-    console.log(window.scrollY);
     if (window.scrollY > 130) {
       this.setState({
         isAtTop: false,
