@@ -22,8 +22,7 @@ class Videoplayer extends React.Component {
     const viewHeight = this.videoRef.current.offsetTop - window.innerHeight;
     if (window.scrollY > viewHeight) {
       this.playVideo();
-    }
-    else {
+    } else {
       this.pauseVideo();
     }
   }

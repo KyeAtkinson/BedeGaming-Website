@@ -1,14 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import Breaker from '../images/Breaker.png';
 import VideoPlayer from './VideoPlayer';
 import Video from '../Videos/video.mp4';
 
 const Container = styled.div`
   margin: 0;
-  height: 35rem;
-  background: linear-gradient(rgba(203, 45, 62, 0.75), rgba(239, 71, 58, 0.75));
+  height: 100vh;
+  background: linear-gradient(rgba(203,45,62,0.75),rgba(156, 24, 14, 0.66));
   padding-top: 3rem;
   position: relative;
+  overflow: hidden;
+
+  @media (min-width: 992px) {
+    height: 35rem;
+  }
 
   .logo {
     display: flex;
@@ -16,37 +22,35 @@ const Container = styled.div`
 
     svg {
       margin: 10rem 0 0;
-      height: 10rem;
+      height: 6rem;
       fill: white;
       filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
       z-index: 0;
+
+      @media (min-width: 992px) {
+        margin: 10rem 0 0;
+        height: 10rem;
+      }
     }
   }
 
   h1 {
     font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
     text-align: center;
     color: white;
+
+    @media (min-width: 992px) {
+      font-size: 2.5rem;
+    }
   }
 
-  .icon-container {
-    display: flex;
-    justify-content: center;
-
-    @keyframes grow {
-      100% {
-        transform: scale(1.2);
-      }
-    }
-
-    img {
-      height: 7rem;
-      margin: 1rem 1.5rem;
-      animation: shrink 1s forwards ease-in-out;
-    }
-    img:hover {
-      animation: grow 1s forwards ease-out;
-    }
+  .breaker-lines {
+    filter: brightness(0) invert(1);
+    position: absolute;
+    top: -200px;
+    width: 100%;
+    z-index: -1;
   }
 
   video {
@@ -72,6 +76,7 @@ const Body = () => (
     </div>
     <VideoPlayer src={Video} />
     <h1>THE FIRST CHOICE GAMING PLATFORM</h1>
+    <img className="breaker-lines" src={Breaker} alt="" />
   </Container>
 );
 
