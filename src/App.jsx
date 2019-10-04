@@ -3,12 +3,15 @@ import React from 'react';
 // import Body from './components/Body';
 import './App.css';
 
+const Home = () => (<p>Hi</p>);
+
 function App() {
   return (
     <div className="App">
       {/* <Navigation /> */}
       {/* <Body /> */}
       <h1>Hello michael. and dog.</h1>
+      <Home />
     </div>
   );
 }
