@@ -1,9 +1,8 @@
 import React from 'react';
 // import Navigation from './components/Navigation';
 // import Body from './components/Body';
+import Home from './components/Home';
 import './App.css';
-
-const Home = () => (<p>Hi</p>);
 
 function App() {
   return (
