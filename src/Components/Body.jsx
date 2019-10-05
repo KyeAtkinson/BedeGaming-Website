@@ -46,8 +46,9 @@ const Container = styled.div`
 
   .breaker-lines {
     filter: brightness(2);
+    height: 100%;
     position: absolute;
-    top: -100px;
+    top: 0;
     width: 100%;
     z-index: -1;
   }
