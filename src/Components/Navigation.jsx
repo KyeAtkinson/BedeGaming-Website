@@ -4,19 +4,26 @@ import styled from 'styled-components';
 const Container = styled.div`
   align-items: center;
   background-color:${props => (props.isAtTop ? 'transparent' : '#fff')};
-  display: ${props => (props.isAtTop ? 'flex' : 'grid')};
+  display: flex;
+  font-size: 0.9rem;
   grid-template-columns:${props => (props.isAtTop ? '' : '1fr 100px 1fr')};
-  height: ${props => (props.isAtTop ? '8rem' : '4rem')};
+  height: ${props => (props.isAtTop ? '5rem' : '3rem')};
   justify-content: center;
   position: fixed;
   top: 0;
   transition: all 300ms ease-in-out;
   width: 100%;
   z-index: 2;
+  flex-wrap: wrap;
+
+  @media (min-width: 992px) {
+    font-size: 1rem;
+    height: ${props => (props.isAtTop ? '8rem' : '4rem')};
+    display: ${props => (props.isAtTop ? 'flex' : 'grid')};
+  }
 
   .links {
     display: flex;
-    font-family: 'Poppins', sans-serif;
     font-weight: 50;
     justify-content: space-around;
     text-transform: uppercase;
@@ -78,7 +85,11 @@ const Container = styled.div`
   }
 
   .logo {
+    display: none;
+
+  @media (min-width: 992px) {
     display: flex;
+  }
 
     svg {
       fill: ${props => (props.isAtTop ? '#fff' : '#dc0e17')};

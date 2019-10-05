@@ -7,13 +7,13 @@ import Video from '../Videos/video.mp4';
 const Container = styled.div`
   margin: 0;
   height: 100vh;
-  background: linear-gradient(rgba(203,45,62,0.75),rgba(156, 24, 14, 0.66));
+  background: linear-gradient(rgba(14, 0, 2, 0.75),rgba(41, 41, 41, 0.66));
   padding-top: 3rem;
   position: relative;
   overflow: hidden;
 
   @media (min-width: 992px) {
-    height: 35rem;
+    height: 40rem;
   }
 
   .logo {
@@ -23,7 +23,7 @@ const Container = styled.div`
     svg {
       margin: 10rem 0 0;
       height: 6rem;
-      fill: white;
+      fill: #E21317;
       filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2));
       z-index: 0;
 
@@ -35,7 +35,6 @@ const Container = styled.div`
   }
 
   h1 {
-    font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
     text-align: center;
     color: white;
@@ -46,9 +45,9 @@ const Container = styled.div`
   }
 
   .breaker-lines {
-    filter: brightness(0) invert(1);
+    filter: brightness(2);
     position: absolute;
-    top: -200px;
+    top: -100px;
     width: 100%;
     z-index: -1;
   }
